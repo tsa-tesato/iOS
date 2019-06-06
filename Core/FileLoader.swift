@@ -27,13 +27,16 @@ enum FileError: Error {
 class FileLoader {
 
     func load(fileName: String, fromBundle bundle: Bundle) throws -> Data {
-
-        let fileUrl = URL(fileURLWithPath: fileName)
-        let baseName = fileUrl.deletingPathExtension().path
-        let ext = fileUrl.pathExtension
-
-        guard let path = bundle.path(forResource: baseName, ofType: ext) else { throw  FileError.unknownFile }
-        let url = URL(fileURLWithPath: path)
+        #if !targetEnvironment(UIKitForMac)
+            let fileUrl = URL(fileURLWithPath: fileName)
+            let baseName = fileUrl.deletingPathExtension().path
+            let ext = fileUrl.pathExtension
+            guard let path = bundle.path(forResource: baseName, ofType: ext) else { throw  FileError.unknownFile }
+            let url = URL(fileURLWithPath: path)
+        #else
+            guard let url = try? "\(bundle.bundleURL.absoluteString)Resources/\(fileName)".asURL() else { throw  FileError.unknownFile }
+        #endif
+        
         guard let data = try? Data(contentsOf: url, options: [.mappedIfSafe]) else { throw  FileError.invalidFileContents }
         return data
     }
