@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import Punycode
 
 extension String {
 
@@ -56,52 +55,6 @@ extension String {
         if let url = URL(string: self) {
             return url
         }
-        
-        if contains(" ") {
-            return nil
-        }
-        
-        var originalScheme = ""
-        var s = self
-        
-        if hasPrefix(URL.URLProtocol.http.scheme) {
-            originalScheme = URL.URLProtocol.http.scheme
-        } else if hasPrefix(URL.URLProtocol.https.scheme) {
-            originalScheme = URL.URLProtocol.https.scheme
-        } else if !contains(".") {
-            // could be a local domain but user needs to use the protocol to specify that
-            return nil
-        } else {
-            s = URL.URLProtocol.https.scheme + s
-        }
-        
-        let urlAndQuery = s.split(separator: "?")
-        guard urlAndQuery.count > 0 else {
-            return nil
-        }
-        
-        let query = urlAndQuery.count > 1 ? "?" + urlAndQuery[1] : ""
-        let componentsWithoutQuery = [String](urlAndQuery[0].split(separator: "/").map { String($0) }.dropFirst())
-        guard componentsWithoutQuery.count > 0 else {
-            return nil
-        }
-        
-        let host = componentsWithoutQuery[0].punycodeEncodedHostname
-        let encodedPath = componentsWithoutQuery
-            .dropFirst()
-            .map { $0.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlPathAllowed) ?? $0 }
-            .joined(separator: "/")
-        
-        let hostPathSeparator = !encodedPath.isEmpty || hasSuffix("/") ? "/" : ""
-        let url = originalScheme + host + hostPathSeparator + encodedPath + query
-        return URL(string: url)
+        return nil
     }
-    
-    public var punycodeEncodedHostname: String {
-        return self.split(separator: ".")
-            .map { String($0) }
-            .map { $0.idnaEncoded ?? $0 }
-            .joined(separator: ".")
-    }
-    
 }

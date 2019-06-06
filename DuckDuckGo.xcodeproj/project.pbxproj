@@ -109,7 +109,6 @@
 		8533133F1F98EA7900E061A5 /* WhitelistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8533133C1F98E9DB00E061A5 /* WhitelistManager.swift */; };
 		85371D242121B9D500920548 /* new_tab.json in Resources */ = {isa = PBXBuildFile; fileRef = 85371D232121B9D400920548 /* new_tab.json */; };
 		85371D262121BA2800920548 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85371D252121BA2800920548 /* Lottie.framework */; };
-		85372444220C6AD7009D09CD /* Punycode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8537243F220C5BB3009D09CD /* Punycode.framework */; };
 		85372447220DD103009D09CD /* UIKeyCommandExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85372446220DD103009D09CD /* UIKeyCommandExtension.swift */; };
 		85374D3521AC26E300FF5A1E /* BookmarksAndFavoritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85374D3421AC26E300FF5A1E /* BookmarksAndFavoritesDataSource.swift */; };
 		85374D3821AC419800FF5A1E /* NavigationSearchHomeViewSectionRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85374D3721AC419800FF5A1E /* NavigationSearchHomeViewSectionRenderer.swift */; };
@@ -898,7 +897,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85372444220C6AD7009D09CD /* Punycode.framework in Frameworks */,
 				8328AABF212B5D2000293140 /* CommonCrypto.framework in Frameworks */,
 				F1C81A741F33873800241DE6 /* Alamofire.framework in Frameworks */,
 			);
