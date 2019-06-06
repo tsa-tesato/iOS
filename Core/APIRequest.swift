@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import Alamofire
 
 public typealias APIRequestCompletion = (APIRequest.Response?, Error?) -> Void
 
@@ -41,7 +40,7 @@ public class APIRequest {
         
         Logger.log(text: "Requesting \(url)")
         
-        return Alamofire.request(url, method: method, parameters: parameters, headers: APIHeaders().defaultHeaders)
+        return Core.request(url, method: method, parameters: parameters, headers: APIHeaders().defaultHeaders)
             .validate(statusCode: 200..<300)
             .responseData(queue: callbackQueue) { response in
                 

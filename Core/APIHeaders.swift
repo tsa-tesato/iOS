@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import Alamofire
 
 public class APIHeaders {
 
@@ -34,7 +33,7 @@ public class APIHeaders {
     }
 
     public var defaultHeaders: HTTPHeaders {
-        var headers = Alamofire.SessionManager.defaultHTTPHeaders
+        var headers = SessionManager.defaultHTTPHeaders
         headers[Name.userAgent] = userAgent
         return headers
     }

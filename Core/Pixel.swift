@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import Alamofire
 
 public enum PixelName: String {
     
@@ -165,7 +164,7 @@ public class Pixel {
             .pixelUrl(forPixelNamed: pixel.rawValue, formFactor: formFactor)
             .addParams(newParams)
         
-        Alamofire.request(url, headers: headers).validate(statusCode: 200..<300).response { response in
+        request(url, headers: headers).validate(statusCode: 200..<300).response { response in
             Logger.log(items: "Pixel fired \(pixel.rawValue)")
             onComplete(response.error)
         }
