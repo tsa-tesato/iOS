@@ -18,7 +18,6 @@
 //
 
 import UIKit
-import Lottie
 
 protocol TabSwitcherButtonDelegate: NSObjectProtocol {
     

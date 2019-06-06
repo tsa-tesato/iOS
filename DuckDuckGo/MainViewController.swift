@@ -20,7 +20,6 @@
 import UIKit
 import WebKit
 import Core
-import Lottie
 
 // swiftlint:disable type_body_length
 // swiftlint:disable file_length
