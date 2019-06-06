@@ -96,6 +96,7 @@
 		834F4FE622A997E90081108A /* LOTLayerContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F4F9622A997E90081108A /* LOTLayerContainer.m */; };
 		834F4FE722A997E90081108A /* LOTCompositionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F4F9A22A997E90081108A /* LOTCompositionContainer.m */; };
 		834F4FE822A997E90081108A /* LOTMaskContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F4F9B22A997E90081108A /* LOTMaskContainer.m */; };
+		834F4FEB22A999820081108A /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FEA22A999810081108A /* UIDeviceExtension.swift */; };
 		8364F7101F95FA7600562989 /* DisconnectMeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364F70F1F95FA7600562989 /* DisconnectMeStore.swift */; };
 		837094302142C4C200A58838 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA54601E48D90700223211 /* NotificationCenter.framework */; };
 		837094332142C4C200A58838 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837094322142C4C200A58838 /* TodayViewController.swift */; };
@@ -351,7 +352,6 @@
 		F17922DE1E7192E6006E3D97 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922DD1E7192E6006E3D97 /* SuggestionTableViewCell.swift */; };
 		F17922E01E71BB59006E3D97 /* AutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922DF1E71BB59006E3D97 /* AutocompleteViewControllerDelegate.swift */; };
 		F17922E21E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922E11E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift */; };
-		F17BA43D1F1CD99800460FFA /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA4391F1CD99800460FFA /* Device.framework */; };
 		F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA43A1F1CD99800460FFA /* Kingfisher.framework */; };
 		F17D723C1E8BB374003E8B0E /* AppDeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D723B1E8BB374003E8B0E /* AppDeepLinks.swift */; };
 		F18326871E60542100240060 /* JavascriptLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18326861E60542100240060 /* JavascriptLoader.swift */; };
@@ -623,6 +623,7 @@
 		834F4FA822A997E90081108A /* LOTAnimationView_Compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTAnimationView_Compat.h; sourceTree = "<group>"; };
 		834F4FA922A997E90081108A /* LOTValueCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTValueCallback.h; sourceTree = "<group>"; };
 		834F4FAA22A997E90081108A /* LOTBlockCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTBlockCallback.h; sourceTree = "<group>"; };
+		834F4FEA22A999810081108A /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 		8364F70F1F95FA7600562989 /* DisconnectMeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectMeStore.swift; sourceTree = "<group>"; };
 		8364F7111F961DDB00562989 /* DisconnectMeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectMeStoreTests.swift; sourceTree = "<group>"; };
 		836B6B691F67F11E0061ECFB /* ContentBlockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerTests.swift; sourceTree = "<group>"; };
@@ -1077,7 +1078,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F143C2EB1E4A4CD400CFDE3A /* Core.framework in Frameworks */,
-				F17BA43D1F1CD99800460FFA /* Device.framework in Frameworks */,
 				F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1149,6 +1149,7 @@
 		8328AAB0212A3D4F00293140 /* Third-Party */ = {
 			isa = PBXGroup;
 			children = (
+				834F4FE922A999810081108A /* Device */,
 				834F4F1C22A997E90081108A /* Lottie */,
 				838F639F22A94F5D00D0A1C0 /* Toast */,
 				8328AAB1212A3D6800293140 /* bloom_cpp */,
@@ -1408,6 +1409,14 @@
 				834F4FAA22A997E90081108A /* LOTBlockCallback.h */,
 			);
 			path = PublicHeaders;
+			sourceTree = "<group>";
+		};
+		834F4FE922A999810081108A /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				834F4FEA22A999810081108A /* UIDeviceExtension.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		835750931F8E9A610059E07B /* contentblocking */ = {
@@ -3228,6 +3237,7 @@
 				980891A72237D5D800313A70 /* FeedbackPresenter.swift in Sources */,
 				85F1E9AC1FB49C0F00A75AC1 /* DisplayableCertificateBuilder.swift in Sources */,
 				85B9CB8521AEBD92009001F1 /* NavigationSearchHomeCell.swift in Sources */,
+				834F4FEB22A999820081108A /* UIDeviceExtension.swift in Sources */,
 				85200F971FBB31E8001AF290 /* SiteRatingPrivacyProtectionExtension.swift in Sources */,
 				F13B4BC01F180D8A00814661 /* TabsModel.swift in Sources */,
 				834F4FE322A997E90081108A /* LOTAnimatedSwitch.m in Sources */,
