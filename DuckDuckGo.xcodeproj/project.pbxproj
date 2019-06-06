@@ -102,7 +102,6 @@
 		834F500922A99C0F0081108A /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FEF22A99C0F0081108A /* Kingfisher.swift */; };
 		834F500A22A99C0F0081108A /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF022A99C0F0081108A /* RequestModifier.swift */; };
 		834F500B22A99C0F0081108A /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */; };
-		834F500C22A99C0F0081108A /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */; };
 		834F500D22A99C0F0081108A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF322A99C0F0081108A /* Image.swift */; };
 		834F500E22A99C0F0081108A /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF422A99C0F0081108A /* Indicator.swift */; };
 		834F500F22A99C0F0081108A /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF522A99C0F0081108A /* CacheSerializer.swift */; };
@@ -111,7 +110,6 @@
 		834F501222A99C0F0081108A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF822A99C0F0081108A /* ImageDownloader.swift */; };
 		834F501322A99C0F0081108A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFA22A99C0F0081108A /* Box.swift */; };
 		834F501422A99C0F0081108A /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFB22A99C0F0081108A /* ImageModifier.swift */; };
-		834F501522A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */; };
 		834F501622A99C0F0081108A /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFD22A99C0F0081108A /* KingfisherManager.swift */; };
 		834F501722A99C0F0081108A /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */; };
 		834F501822A99C0F0081108A /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFF22A99C0F0081108A /* ImageTransition.swift */; };
@@ -669,7 +667,6 @@
 		834F4FEF22A99C0F0081108A /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
 		834F4FF022A99C0F0081108A /* RequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
 		834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
-		834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		834F4FF322A99C0F0081108A /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		834F4FF422A99C0F0081108A /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		834F4FF522A99C0F0081108A /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
@@ -679,7 +676,6 @@
 		834F4FF922A99C0F0081108A /* Kingfisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kingfisher.h; sourceTree = "<group>"; };
 		834F4FFA22A99C0F0081108A /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		834F4FFB22A99C0F0081108A /* ImageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
-		834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
 		834F4FFD22A99C0F0081108A /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
 		834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		834F4FFF22A99C0F0081108A /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
@@ -1511,7 +1507,6 @@
 				834F4FEF22A99C0F0081108A /* Kingfisher.swift */,
 				834F4FF022A99C0F0081108A /* RequestModifier.swift */,
 				834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */,
-				834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */,
 				834F4FF322A99C0F0081108A /* Image.swift */,
 				834F4FF422A99C0F0081108A /* Indicator.swift */,
 				834F4FF522A99C0F0081108A /* CacheSerializer.swift */,
@@ -1521,7 +1516,6 @@
 				834F4FF922A99C0F0081108A /* Kingfisher.h */,
 				834F4FFA22A99C0F0081108A /* Box.swift */,
 				834F4FFB22A99C0F0081108A /* ImageModifier.swift */,
-				834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */,
 				834F4FFD22A99C0F0081108A /* KingfisherManager.swift */,
 				834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */,
 				834F4FFF22A99C0F0081108A /* ImageTransition.swift */,
@@ -1778,7 +1772,6 @@
 				839F119520DBC489007CD8C2 /* Feedback */,
 				85F2FFFE2215C163006BB258 /* FindInPage */,
 				F13B4BF31F18C73A00814661 /* Home */,
-				84E341A11E2F7EFB00BDBA6F /* Info.plist */,
 				F1C5ECFA1E37B15B00C599A4 /* Main */,
 				85AE668C20971FCA0014CF04 /* Notifications */,
 				F1C4A70C1E5771F800A6CA1B /* OmniBar */,
@@ -1792,6 +1785,7 @@
 				F11CEF581EBB66C80088E4D7 /* Tutorials */,
 				F1D796ED1E7AE4090019D451 /* UserInterface */,
 				84E341E31E2FC0E400BDBA6F /* UserInterfaceResources */,
+				84E341A11E2F7EFB00BDBA6F /* Info.plist */,
 			);
 			path = DuckDuckGo;
 			sourceTree = "<group>";
@@ -2954,7 +2948,6 @@
 				84E341901E2F7EFB00BDBA6F /* Resources */,
 				F143C2F01E4A4CD400CFDE3A /* Embed Frameworks */,
 				F10307651E7D5B2C0059FEC7 /* Copy Frameworks */,
-				F17BA4411F1CD9D300460FFA /* Cathage Copy Frameworks */,
 				83E282AC20BC1840005FBE88 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -3212,36 +3205,6 @@
 			shellScript = "\n[ -z \"$TRAVIS\" ]\n\nif env | grep -q ^TRAVIS=\nthen\n    echo Skipping fonts on TRAVIS build\nelif [ -d ~/DuckDuckGo/Fonts/proximanova ]\nthen\n\n    echo Installing fonts from standard location\n    cp ~/DuckDuckGo/Fonts/proximanova/*.otf \"$SRCROOT/fonts/licensed\"\n\nelif [ ! -d ~/DuckDuckGo/Fonts/proximanova ]\nthen\n                                      \n    echo \"warning: Correct fonts not found, install proximanova fonts at ~/DuckDuckGo/Fonts/proximanova\"\n                                      \nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F17BA4411F1CD9D300460FFA /* Cathage Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Device.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ToastSwiftFramework.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/CommonCrypto.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Punycode.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/EasyTipView.framework",
-			);
-			name = "Cathage Copy Frameworks";
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Device.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)//Kingfisher.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ToastSwiftFramework.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CommonCrypto.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Punycode.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/EasyTipView.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3371,12 +3334,10 @@
 				857D1DCD22401F0200833940 /* NotFoundCachingImageDownloader.swift in Sources */,
 				8565A33D1FC3B26E00239327 /* PrivacyProtectionFooterController.swift in Sources */,
 				8528AE7C212EF4A200D0BD74 /* AppRatingPrompt.swift in Sources */,
-				834F501522A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift in Sources */,
 				85EE7F59224673C5000FE757 /* WebContainerNavigationController.swift in Sources */,
 				F10307391E7C5E310059FEC7 /* NoBookmarksCell.swift in Sources */,
 				981FED6E22025151008488D7 /* BlankSnapshotViewController.swift in Sources */,
 				98F3A1DC217B373E0011A0D4 /* DarkTheme.swift in Sources */,
-				834F500C22A99C0F0081108A /* NSButton+Kingfisher.swift in Sources */,
 				F164DDBF1F2A509200010DD2 /* FireAnimation.swift in Sources */,
 				834F4FD222A997E90081108A /* LOTBezierPath.m in Sources */,
 				851B128822200575004781BC /* Onboarding.swift in Sources */,
