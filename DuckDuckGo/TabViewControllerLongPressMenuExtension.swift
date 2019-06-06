@@ -66,7 +66,9 @@ extension TabViewController {
     
     private func onReadingAction(forUrl url: URL) {
         Pixel.fire(pixel: .longPressMenuReadingListItem)
+        #if !targetEnvironment(UIKitForMac)
         try? SSReadingList.default()?.addItem(with: url, title: nil, previewText: nil)
+        #endif
     }
     
     private func onCopyAction(forUrl url: URL) {
