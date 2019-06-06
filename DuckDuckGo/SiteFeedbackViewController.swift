@@ -21,7 +21,6 @@ import Foundation
 
 import UIKit
 import Core
-import ToastSwiftFramework
 
 class SiteFeedbackViewController: UIViewController {
 

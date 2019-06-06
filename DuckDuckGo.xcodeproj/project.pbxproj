@@ -48,6 +48,7 @@
 		837094432142C80600A58838 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F143C2E41E4A4CD400CFDE3A /* Core.framework */; };
 		838306B320C704050045E854 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F143C2E41E4A4CD400CFDE3A /* Core.framework */; };
 		838306E320C733010045E854 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 838306E120C733010045E854 /* InfoPlist.strings */; };
+		838F63A122A94F5D00D0A1C0 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F63A022A94F5D00D0A1C0 /* Toast.swift */; };
 		8390446F20BDCE10006461CD /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390446E20BDCE10006461CD /* ShareViewController.swift */; };
 		8390447220BDCE10006461CD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8390447020BDCE10006461CD /* MainInterface.storyboard */; };
 		8390447620BDCE10006461CD /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8390446C20BDCE10006461CD /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -293,7 +294,6 @@
 		F17922E21E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922E11E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift */; };
 		F17BA43D1F1CD99800460FFA /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA4391F1CD99800460FFA /* Device.framework */; };
 		F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA43A1F1CD99800460FFA /* Kingfisher.framework */; };
-		F17BA4401F1CD99800460FFA /* ToastSwiftFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA43C1F1CD99800460FFA /* ToastSwiftFramework.framework */; };
 		F17D723C1E8BB374003E8B0E /* AppDeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D723B1E8BB374003E8B0E /* AppDeepLinks.swift */; };
 		F18326871E60542100240060 /* JavascriptLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18326861E60542100240060 /* JavascriptLoader.swift */; };
 		F18608E01E5E649400361C30 /* document.js in Resources */ = {isa = PBXBuildFile; fileRef = F18608DF1E5E649400361C30 /* document.js */; };
@@ -457,6 +457,7 @@
 		838306EF20C736C50045E854 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		838306F020C736D00045E854 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		838306F120C736DF0045E854 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		838F63A022A94F5D00D0A1C0 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		8390446C20BDCE10006461CD /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8390446E20BDCE10006461CD /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		8390447120BDCE10006461CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -890,7 +891,6 @@
 				F143C2EB1E4A4CD400CFDE3A /* Core.framework in Frameworks */,
 				F17BA43D1F1CD99800460FFA /* Device.framework in Frameworks */,
 				F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */,
-				F17BA4401F1CD99800460FFA /* ToastSwiftFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,6 +963,7 @@
 		8328AAB0212A3D4F00293140 /* Third-Party */ = {
 			isa = PBXGroup;
 			children = (
+				838F639F22A94F5D00D0A1C0 /* Toast */,
 				8328AAB1212A3D6800293140 /* bloom_cpp */,
 			);
 			path = "Third-Party";
@@ -1073,6 +1074,14 @@
 				F16394061ECE01E400DDD653 /* DisconnectMeTrackersParser.swift */,
 			);
 			name = Converter;
+			sourceTree = "<group>";
+		};
+		838F639F22A94F5D00D0A1C0 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				838F63A022A94F5D00D0A1C0 /* Toast.swift */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		8390446D20BDCE10006461CD /* ShareExtension */ = {
@@ -2788,6 +2797,7 @@
 				F1CA3C3B1F045B65005FADB3 /* Authenticator.swift in Sources */,
 				851B12CE2236CAB2004781BC /* HomePageSettingsViewController.swift in Sources */,
 				8505836D219F424500ED4EDB /* Point.swift in Sources */,
+				838F63A122A94F5D00D0A1C0 /* Toast.swift in Sources */,
 				F114C5611E67599C0018F95F /* UseDuckDuckGoInSafariViewController.swift in Sources */,
 				981FED76220464EF008488D7 /* AutoClearSettingsModel.swift in Sources */,
 				83004E882193E8C700DA013C /* TabViewControllerLongPressMenuExtension.swift in Sources */,
