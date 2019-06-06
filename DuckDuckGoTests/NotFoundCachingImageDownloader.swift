@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import Kingfisher
 
 class NotFoundCachingDownloader: ImageDownloader {
     

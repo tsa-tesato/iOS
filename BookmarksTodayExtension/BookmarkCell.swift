@@ -19,7 +19,6 @@
 
 import UIKit
 import Core
-import Kingfisher
 
 class BookmarkCell: UITableViewCell {
     

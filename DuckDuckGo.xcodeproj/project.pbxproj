@@ -97,6 +97,31 @@
 		834F4FE722A997E90081108A /* LOTCompositionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F4F9A22A997E90081108A /* LOTCompositionContainer.m */; };
 		834F4FE822A997E90081108A /* LOTMaskContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 834F4F9B22A997E90081108A /* LOTMaskContainer.m */; };
 		834F4FEB22A999820081108A /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FEA22A999810081108A /* UIDeviceExtension.swift */; };
+		834F500722A99C0F0081108A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FED22A99C0F0081108A /* ImageCache.swift */; };
+		834F500822A99C0F0081108A /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FEE22A99C0F0081108A /* ThreadHelper.swift */; };
+		834F500922A99C0F0081108A /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FEF22A99C0F0081108A /* Kingfisher.swift */; };
+		834F500A22A99C0F0081108A /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF022A99C0F0081108A /* RequestModifier.swift */; };
+		834F500B22A99C0F0081108A /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */; };
+		834F500C22A99C0F0081108A /* NSButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */; };
+		834F500D22A99C0F0081108A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF322A99C0F0081108A /* Image.swift */; };
+		834F500E22A99C0F0081108A /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF422A99C0F0081108A /* Indicator.swift */; };
+		834F500F22A99C0F0081108A /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF522A99C0F0081108A /* CacheSerializer.swift */; };
+		834F501022A99C0F0081108A /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF622A99C0F0081108A /* UIButton+Kingfisher.swift */; };
+		834F501122A99C0F0081108A /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF722A99C0F0081108A /* Resource.swift */; };
+		834F501222A99C0F0081108A /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FF822A99C0F0081108A /* ImageDownloader.swift */; };
+		834F501322A99C0F0081108A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFA22A99C0F0081108A /* Box.swift */; };
+		834F501422A99C0F0081108A /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFB22A99C0F0081108A /* ImageModifier.swift */; };
+		834F501522A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */; };
+		834F501622A99C0F0081108A /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFD22A99C0F0081108A /* KingfisherManager.swift */; };
+		834F501722A99C0F0081108A /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */; };
+		834F501822A99C0F0081108A /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F4FFF22A99C0F0081108A /* ImageTransition.swift */; };
+		834F501922A99C0F0081108A /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500022A99C0F0081108A /* AnimatedImageView.swift */; };
+		834F501A22A99C0F0081108A /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500122A99C0F0081108A /* String+MD5.swift */; };
+		834F501B22A99C0F0081108A /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500222A99C0F0081108A /* ImageProcessor.swift */; };
+		834F501C22A99C0F0081108A /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500322A99C0F0081108A /* Filter.swift */; };
+		834F501D22A99C0F0081108A /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500422A99C0F0081108A /* Placeholder.swift */; };
+		834F501E22A99C0F0081108A /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500522A99C0F0081108A /* KingfisherOptionsInfo.swift */; };
+		834F501F22A99C0F0081108A /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F500622A99C0F0081108A /* ImagePrefetcher.swift */; };
 		8364F7101F95FA7600562989 /* DisconnectMeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8364F70F1F95FA7600562989 /* DisconnectMeStore.swift */; };
 		837094302142C4C200A58838 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA54601E48D90700223211 /* NotificationCenter.framework */; };
 		837094332142C4C200A58838 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837094322142C4C200A58838 /* TodayViewController.swift */; };
@@ -352,7 +377,6 @@
 		F17922DE1E7192E6006E3D97 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922DD1E7192E6006E3D97 /* SuggestionTableViewCell.swift */; };
 		F17922E01E71BB59006E3D97 /* AutocompleteViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922DF1E71BB59006E3D97 /* AutocompleteViewControllerDelegate.swift */; };
 		F17922E21E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17922E11E71CD67006E3D97 /* NoSuggestionsTableViewCell.swift */; };
-		F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BA43A1F1CD99800460FFA /* Kingfisher.framework */; };
 		F17D723C1E8BB374003E8B0E /* AppDeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17D723B1E8BB374003E8B0E /* AppDeepLinks.swift */; };
 		F18326871E60542100240060 /* JavascriptLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18326861E60542100240060 /* JavascriptLoader.swift */; };
 		F18608E01E5E649400361C30 /* document.js in Resources */ = {isa = PBXBuildFile; fileRef = F18608DF1E5E649400361C30 /* document.js */; };
@@ -624,6 +648,32 @@
 		834F4FA922A997E90081108A /* LOTValueCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTValueCallback.h; sourceTree = "<group>"; };
 		834F4FAA22A997E90081108A /* LOTBlockCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTBlockCallback.h; sourceTree = "<group>"; };
 		834F4FEA22A999810081108A /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
+		834F4FED22A99C0F0081108A /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		834F4FEE22A99C0F0081108A /* ThreadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
+		834F4FEF22A99C0F0081108A /* Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kingfisher.swift; sourceTree = "<group>"; };
+		834F4FF022A99C0F0081108A /* RequestModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModifier.swift; sourceTree = "<group>"; };
+		834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		834F4FF322A99C0F0081108A /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		834F4FF422A99C0F0081108A /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		834F4FF522A99C0F0081108A /* CacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheSerializer.swift; sourceTree = "<group>"; };
+		834F4FF622A99C0F0081108A /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		834F4FF722A99C0F0081108A /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		834F4FF822A99C0F0081108A /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		834F4FF922A99C0F0081108A /* Kingfisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kingfisher.h; sourceTree = "<group>"; };
+		834F4FFA22A99C0F0081108A /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		834F4FFB22A99C0F0081108A /* ImageModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModifier.swift; sourceTree = "<group>"; };
+		834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKInterfaceImage+Kingfisher.swift"; sourceTree = "<group>"; };
+		834F4FFD22A99C0F0081108A /* KingfisherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherManager.swift; sourceTree = "<group>"; };
+		834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		834F4FFF22A99C0F0081108A /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
+		834F500022A99C0F0081108A /* AnimatedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedImageView.swift; sourceTree = "<group>"; };
+		834F500122A99C0F0081108A /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		834F500222A99C0F0081108A /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		834F500322A99C0F0081108A /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		834F500422A99C0F0081108A /* Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
+		834F500522A99C0F0081108A /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		834F500622A99C0F0081108A /* ImagePrefetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
 		8364F70F1F95FA7600562989 /* DisconnectMeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectMeStore.swift; sourceTree = "<group>"; };
 		8364F7111F961DDB00562989 /* DisconnectMeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectMeStoreTests.swift; sourceTree = "<group>"; };
 		836B6B691F67F11E0061ECFB /* ContentBlockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerTests.swift; sourceTree = "<group>"; };
@@ -1078,7 +1128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F143C2EB1E4A4CD400CFDE3A /* Core.framework in Frameworks */,
-				F17BA43E1F1CD99800460FFA /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1149,6 +1198,7 @@
 		8328AAB0212A3D4F00293140 /* Third-Party */ = {
 			isa = PBXGroup;
 			children = (
+				834F4FEC22A99C0F0081108A /* Kingfisher */,
 				834F4FE922A999810081108A /* Device */,
 				834F4F1C22A997E90081108A /* Lottie */,
 				838F639F22A94F5D00D0A1C0 /* Toast */,
@@ -1417,6 +1467,39 @@
 				834F4FEA22A999810081108A /* UIDeviceExtension.swift */,
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		834F4FEC22A99C0F0081108A /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				834F4FED22A99C0F0081108A /* ImageCache.swift */,
+				834F4FEE22A99C0F0081108A /* ThreadHelper.swift */,
+				834F4FEF22A99C0F0081108A /* Kingfisher.swift */,
+				834F4FF022A99C0F0081108A /* RequestModifier.swift */,
+				834F4FF122A99C0F0081108A /* ImageView+Kingfisher.swift */,
+				834F4FF222A99C0F0081108A /* NSButton+Kingfisher.swift */,
+				834F4FF322A99C0F0081108A /* Image.swift */,
+				834F4FF422A99C0F0081108A /* Indicator.swift */,
+				834F4FF522A99C0F0081108A /* CacheSerializer.swift */,
+				834F4FF622A99C0F0081108A /* UIButton+Kingfisher.swift */,
+				834F4FF722A99C0F0081108A /* Resource.swift */,
+				834F4FF822A99C0F0081108A /* ImageDownloader.swift */,
+				834F4FF922A99C0F0081108A /* Kingfisher.h */,
+				834F4FFA22A99C0F0081108A /* Box.swift */,
+				834F4FFB22A99C0F0081108A /* ImageModifier.swift */,
+				834F4FFC22A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift */,
+				834F4FFD22A99C0F0081108A /* KingfisherManager.swift */,
+				834F4FFE22A99C0F0081108A /* FormatIndicatedCacheSerializer.swift */,
+				834F4FFF22A99C0F0081108A /* ImageTransition.swift */,
+				834F500022A99C0F0081108A /* AnimatedImageView.swift */,
+				834F500122A99C0F0081108A /* String+MD5.swift */,
+				834F500222A99C0F0081108A /* ImageProcessor.swift */,
+				834F500322A99C0F0081108A /* Filter.swift */,
+				834F500422A99C0F0081108A /* Placeholder.swift */,
+				834F500522A99C0F0081108A /* KingfisherOptionsInfo.swift */,
+				834F500622A99C0F0081108A /* ImagePrefetcher.swift */,
+			);
+			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 		835750931F8E9A610059E07B /* contentblocking */ = {
@@ -3132,9 +3215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834F500F22A99C0F0081108A /* CacheSerializer.swift in Sources */,
 				8528AE81212F15D600D0BD74 /* AppRatingPrompt.xcdatamodeld in Sources */,
 				853C5F5B21BFF0AE001F7A05 /* HomeCollectionView.swift in Sources */,
 				834F4FDC22A997E90081108A /* LOTBlockCallback.m in Sources */,
+				834F501E22A99C0F0081108A /* KingfisherOptionsInfo.swift in Sources */,
 				9820FF502244FECC008D4782 /* UIScrollViewExtension.swift in Sources */,
 				982C87C42255559A00919035 /* UITableViewCellExtension.swift in Sources */,
 				F1668BCE1E798081008CBA04 /* BookmarksViewController.swift in Sources */,
@@ -3153,18 +3238,23 @@
 				855D914D2063EF6A00C4B448 /* CompositeTransition.swift in Sources */,
 				851B129E222432D4004781BC /* TabViewController+BrowsingTipsDelegate.swift in Sources */,
 				8539D9F71FA756AD00BE8746 /* PrivacyProtectionController.swift in Sources */,
+				834F501322A99C0F0081108A /* Box.swift in Sources */,
 				F1F5337C1F26A9EF00D80D4F /* UserText.swift in Sources */,
 				834F4FD322A997E90081108A /* LOTRadialGradientLayer.m in Sources */,
 				85374D3521AC26E300FF5A1E /* BookmarksAndFavoritesDataSource.swift in Sources */,
+				834F501D22A99C0F0081108A /* Placeholder.swift in Sources */,
 				853C5F6121C277C7001F7A05 /* global.swift in Sources */,
 				F13B4BD31F1822C700814661 /* Tab.swift in Sources */,
 				834F4FD022A997E90081108A /* LOTShapeStroke.m in Sources */,
 				834F4FCD22A997E90081108A /* LOTShapeGroup.m in Sources */,
 				F1BE54581E69DE1000FCF649 /* TutorialSettings.swift in Sources */,
 				834F4FE522A997E90081108A /* LOTBezierData.m in Sources */,
+				834F501B22A99C0F0081108A /* ImageProcessor.swift in Sources */,
 				F1126E251EA749A30016A6C7 /* BlurAnimatedTransitioning.swift in Sources */,
 				98F3A1D8217B37010011A0D4 /* Theme.swift in Sources */,
+				834F501722A99C0F0081108A /* FormatIndicatedCacheSerializer.swift in Sources */,
 				85F200002215C17B006BB258 /* FindInPage.swift in Sources */,
+				834F501622A99C0F0081108A /* KingfisherManager.swift in Sources */,
 				834F4FC522A997E90081108A /* LOTShapeStar.m in Sources */,
 				85BD869D1FAA08C400252411 /* PrivacyProtectionEncryptionDetailController.swift in Sources */,
 				834F4FC422A997E90081108A /* LOTLayerGroup.m in Sources */,
@@ -3178,6 +3268,7 @@
 				85E0017B225E0ED700877BF6 /* OnboardingThemesViewController.swift in Sources */,
 				834F4FE422A997E90081108A /* LOTKeyframe.m in Sources */,
 				8505836E219F424500ED4EDB /* RoundedRectangleView.swift in Sources */,
+				834F501822A99C0F0081108A /* ImageTransition.swift in Sources */,
 				85058370219F424500ED4EDB /* SearchBarExtension.swift in Sources */,
 				834F4FE622A997E90081108A /* LOTLayerContainer.m in Sources */,
 				834F4FC322A997E90081108A /* LOTAssetGroup.m in Sources */,
@@ -3185,6 +3276,8 @@
 				834F4FBE22A997E90081108A /* LOTFillRenderer.m in Sources */,
 				834F4FD522A997E90081108A /* UIBezierPath.m in Sources */,
 				F114C55B1E66EB020018F95F /* NibLoading.swift in Sources */,
+				834F500722A99C0F0081108A /* ImageCache.swift in Sources */,
+				834F501022A99C0F0081108A /* UIButton+Kingfisher.swift in Sources */,
 				F103076D1E800F5C0059FEC7 /* EditBookmarkAlert.swift in Sources */,
 				F1134EC11F40DD9300B73467 /* AppVersionExtension.swift in Sources */,
 				834F4FCF22A997E90081108A /* LOTShapeTransform.m in Sources */,
@@ -3194,29 +3287,37 @@
 				F13B4BD51F183B3600814661 /* TabsModelPersistenceExtension.swift in Sources */,
 				834F4FDE22A997E90081108A /* LOTAnimationTransitionController.m in Sources */,
 				F1134EE21F4233A200B73467 /* UIViewToastExtension.swift in Sources */,
+				834F501922A99C0F0081108A /* AnimatedImageView.swift in Sources */,
 				834F4FDA22A997E90081108A /* LOTComposition.m in Sources */,
 				980891A52237D4F500313A70 /* FeedbackNavigator.swift in Sources */,
 				83D4A73720E1272F003A7A6D /* SiteFeedbackModel.swift in Sources */,
 				85058366219AE9EA00ED4EDB /* HomePageConfiguration.swift in Sources */,
+				834F501122A99C0F0081108A /* Resource.swift in Sources */,
+				834F500E22A99C0F0081108A /* Indicator.swift in Sources */,
 				834F4FDF22A997E90081108A /* LOTKeypath.m in Sources */,
 				851B12A822246B84004781BC /* EasyTipViewExtension.swift in Sources */,
 				85C37D861FA8BE7100CDE257 /* PrivacyProtectionOverviewController.swift in Sources */,
 				85F200042216F5D8006BB258 /* FindInPageView.swift in Sources */,
+				834F500B22A99C0F0081108A /* ImageView+Kingfisher.swift in Sources */,
 				F1617C131E572E0300DEDCAF /* TabSwitcherViewController.swift in Sources */,
+				834F500A22A99C0F0081108A /* RequestModifier.swift in Sources */,
 				834F4FCC22A997E90081108A /* LOTShapePath.m in Sources */,
 				83BE9BC3215D69C1009844D9 /* AppConfigurationFetch.swift in Sources */,
 				85B9CB8921AEBDD5009001F1 /* FavoriteHomeCell.swift in Sources */,
 				851B12CC22369931004781BC /* AtbAndVariantCleanup.swift in Sources */,
+				834F501222A99C0F0081108A /* ImageDownloader.swift in Sources */,
 				834F4FBC22A997E90081108A /* LOTGradientFillRender.m in Sources */,
 				85F2FFCF2211F8E5006BB258 /* TabSwitcherViewController+KeyCommands.swift in Sources */,
 				F17922E01E71BB59006E3D97 /* AutocompleteViewControllerDelegate.swift in Sources */,
 				857D1DCD22401F0200833940 /* NotFoundCachingImageDownloader.swift in Sources */,
 				8565A33D1FC3B26E00239327 /* PrivacyProtectionFooterController.swift in Sources */,
 				8528AE7C212EF4A200D0BD74 /* AppRatingPrompt.swift in Sources */,
+				834F501522A99C0F0081108A /* WKInterfaceImage+Kingfisher.swift in Sources */,
 				85EE7F59224673C5000FE757 /* WebContainerNavigationController.swift in Sources */,
 				F10307391E7C5E310059FEC7 /* NoBookmarksCell.swift in Sources */,
 				981FED6E22025151008488D7 /* BlankSnapshotViewController.swift in Sources */,
 				98F3A1DC217B373E0011A0D4 /* DarkTheme.swift in Sources */,
+				834F500C22A99C0F0081108A /* NSButton+Kingfisher.swift in Sources */,
 				F164DDBF1F2A509200010DD2 /* FireAnimation.swift in Sources */,
 				834F4FD222A997E90081108A /* LOTBezierPath.m in Sources */,
 				851B128822200575004781BC /* Onboarding.swift in Sources */,
@@ -3250,7 +3351,9 @@
 				834F4FB722A997E90081108A /* LOTPolystarAnimator.m in Sources */,
 				834F4FBF22A997E90081108A /* LOTRepeaterRenderer.m in Sources */,
 				85B9CB8721AEBDB7009001F1 /* CenteredSearchHomeCell.swift in Sources */,
+				834F500D22A99C0F0081108A /* Image.swift in Sources */,
 				8577B0AE2225CA4F009CCC71 /* OnboardingPadViewController.swift in Sources */,
+				834F501F22A99C0F0081108A /* ImagePrefetcher.swift in Sources */,
 				F194FAED1F14E2B3009B4DF8 /* UIFontExtension.swift in Sources */,
 				F1CDD3F21F16911700BE0581 /* AboutViewController.swift in Sources */,
 				98F0FC2021FF18E700CE77AB /* AutoClearSettingsViewController.swift in Sources */,
@@ -3260,9 +3363,11 @@
 				85F6191B20D293AC003904D1 /* HomeRowCTA.swift in Sources */,
 				F1CA3C3B1F045B65005FADB3 /* Authenticator.swift in Sources */,
 				851B12CE2236CAB2004781BC /* HomePageSettingsViewController.swift in Sources */,
+				834F501C22A99C0F0081108A /* Filter.swift in Sources */,
 				8505836D219F424500ED4EDB /* Point.swift in Sources */,
 				838F63A122A94F5D00D0A1C0 /* Toast.swift in Sources */,
 				F114C5611E67599C0018F95F /* UseDuckDuckGoInSafariViewController.swift in Sources */,
+				834F501A22A99C0F0081108A /* String+MD5.swift in Sources */,
 				981FED76220464EF008488D7 /* AutoClearSettingsModel.swift in Sources */,
 				83004E882193E8C700DA013C /* TabViewControllerLongPressMenuExtension.swift in Sources */,
 				98F78B8E22419093007CACF4 /* ThemableNavigationController.swift in Sources */,
@@ -3297,7 +3402,9 @@
 				9820EAF522613CD30089094D /* WebProgressWorker.swift in Sources */,
 				834F4FD122A997E90081108A /* CGGeometry+LOTAdditions.m in Sources */,
 				834F4FC122A997E90081108A /* LOTMask.m in Sources */,
+				834F501422A99C0F0081108A /* ImageModifier.swift in Sources */,
 				F1C4A70E1E57725800A6CA1B /* OmniBar.swift in Sources */,
+				834F500822A99C0F0081108A /* ThreadHelper.swift in Sources */,
 				834F4FE222A997E90081108A /* LOTInterpolatorCallback.m in Sources */,
 				8565A3431FC5995900239327 /* PrivacyProtectionTrackerNetworksController.swift in Sources */,
 				834F4FCB22A997E90081108A /* LOTShapeCircle.m in Sources */,
@@ -3324,6 +3431,7 @@
 				F1D796EE1E7AF2EB0019D451 /* UIViewControllerExtension.swift in Sources */,
 				F15D43201E706CC500BF2CDC /* AutocompleteViewController.swift in Sources */,
 				834F4FB622A997E90081108A /* LOTPathAnimator.m in Sources */,
+				834F500922A99C0F0081108A /* Kingfisher.swift in Sources */,
 				83004E862193E5ED00DA013C /* TabViewControllerBrowsingMenuExtension.swift in Sources */,
 				9838059F2228208E00385F1A /* PositiveFeedbackViewController.swift in Sources */,
 				834F4FDD22A997E90081108A /* LOTAnimationView.m in Sources */,
