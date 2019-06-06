@@ -19,7 +19,6 @@
 
 import UIKit
 import Core
-import EasyTipView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
 
-        EasyTipView.updateGlobalPreferences()
         HTTPSUpgrade.shared.loadDataAsync()
         
         // assign it here, because "did become active" is already too late and "viewWillAppear"

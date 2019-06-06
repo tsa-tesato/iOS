@@ -85,7 +85,6 @@
 		851B129A22242E89004781BC /* ContextualTipsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B129922242E89004781BC /* ContextualTipsStorage.swift */; };
 		851B129C22243178004781BC /* BrowsingTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B129B22243178004781BC /* BrowsingTips.swift */; };
 		851B129E222432D4004781BC /* TabViewController+BrowsingTipsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B129D222432D4004781BC /* TabViewController+BrowsingTipsDelegate.swift */; };
-		851B12A1222440D1004781BC /* EasyTipView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 851B129F222440B3004781BC /* EasyTipView.framework */; };
 		851B12A822246B84004781BC /* EasyTipViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B12A722246B84004781BC /* EasyTipViewExtension.swift */; };
 		851B12CC22369931004781BC /* AtbAndVariantCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850250B220D803F4002199C7 /* AtbAndVariantCleanup.swift */; };
 		851B12CE2236CAB2004781BC /* HomePageSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851B12CD2236CAB2004781BC /* HomePageSettingsViewController.swift */; };
@@ -887,7 +886,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851B12A1222440D1004781BC /* EasyTipView.framework in Frameworks */,
 				85371D262121BA2800920548 /* Lottie.framework in Frameworks */,
 				F143C2EB1E4A4CD400CFDE3A /* Core.framework in Frameworks */,
 				F17BA43D1F1CD99800460FFA /* Device.framework in Frameworks */,

@@ -18,7 +18,6 @@
 //
 
 import Foundation
-import EasyTipView
 
 extension HomeViewController: HomeScreenTipsDelegate {
     
@@ -43,20 +42,7 @@ extension HomeViewController: HomeScreenTipsDelegate {
                 didShow(false)
                 return
             }
-            
-            var preferences = EasyTipView.globalPreferences
-            preferences.positioning.bubbleVInset = 8
-
-            let icon = EasyTipView.Icon(image: UIImage(named: "OnboardingIconSearchPrivately48")!, position: .left, alignment: .centerOrMiddle)
-            let tip = EasyTipView(text: UserText.contextualOnboardingSearchPrivately,
-                                  icon: icon,
-                                  preferences: preferences)
-            tip.show(animated: true, forView: view, withinSuperview: superView)
-            didShow(true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                tip.handleGlobalTouch()
-            }
-        }
+                    }
         
     }
     
@@ -72,41 +58,6 @@ extension HomeViewController: HomeScreenTipsDelegate {
     }
     
     func showCustomizeTip(didShow: @escaping (Bool) -> Void) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            guard let self = self,
-                !self.omniBarTextFieldHasFocus,
-                let omniBar = self.chromeDelegate?.omniBar,
-                let settings = omniBar.settingsButton.imageView,
-                let superView = self.parent?.view else {
-                didShow(false)
-                return
-            }
-
-            var preferences = EasyTipView.globalPreferences
-            preferences.positioning.bubbleHInset = 8
-            
-            let text: String
-            switch ThemeManager.shared.currentTheme.name {
-            case .dark:
-                text = UserText.contextualOnboardingCustomizeLight
-                
-            case .light:
-                text = UserText.contextualOnboardingCustomizeDark                
-            }
-            
-            let icon = EasyTipView.Icon(image: UIImage(named: "OnboardingIconCustomize48")!, position: .left, alignment: .centerOrMiddle)
-            let tip = EasyTipView(text: text,
-                                  icon: icon,
-                                  preferences: preferences)
-
-            tip.show(animated: true, forView: settings, withinSuperview: superView)
-            didShow(true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                tip.handleGlobalTouch()
-            }
-        }
-
     }
  
     func installHomeScreenTips() {

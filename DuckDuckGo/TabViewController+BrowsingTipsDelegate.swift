@@ -17,68 +17,12 @@
 //  limitations under the License.
 //
 
-import EasyTipView
-
 extension TabViewController: BrowsingTipsDelegate {
     
     func showPrivacyGradeTip(didShow: @escaping (Bool) -> Void) {
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            guard let self = self,
-                !self.omniBarTextFieldHasFocus,
-                let omniBar = self.chromeDelegate?.omniBar,
-                let grade = omniBar.siteRatingView,
-                let superView = self.parent?.view else {
-                didShow(false)
-                return
-            }
-
-            self.delegate?.showBars()
-
-            var preferences = EasyTipView.globalPreferences
-            preferences.positioning.bubbleHInset = 8
-            
-            let icon = EasyTipView.Icon(image: UIImage(named: "OnboardingIconBlockTrackers48")!, position: .left, alignment: .centerOrMiddle)
-            let tip = EasyTipView(text: UserText.contextualOnboardingPrivacyGrade,
-                                  icon: icon,
-                                  preferences: preferences)
-
-            tip.show(animated: true, forView: grade, withinSuperview: superView)
-            didShow(true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                tip.handleGlobalTouch()
-            }
-        }
-
     }
     
     func showFireButtonTip(didShow: @escaping (Bool) -> Void) {
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            guard let self = self,
-                !self.omniBarTextFieldHasFocus,
-                let mainViewController = self.parent as? MainViewController,
-                let button = mainViewController.fireButton,
-                let superView = self.parent?.view else {
-                didShow(false)
-                return
-            }
-            
-            self.delegate?.showBars()
-            
-            var preferences = EasyTipView.globalPreferences
-            preferences.positioning.bubbleHInset = 8
-
-            let icon = EasyTipView.Icon(image: UIImage(named: "OnboardingIconFlame48")!, position: .left, alignment: .centerOrMiddle)
-            let tip = EasyTipView(text: UserText.contextualOnboardingFireButton,
-                                  icon: icon,
-                                  preferences: preferences)
-            tip.show(forItem: button, withinSuperView: superView)            
-            didShow(true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                tip.handleGlobalTouch()
-            }
-        }
     }
     
     private var omniBarTextFieldHasFocus: Bool {

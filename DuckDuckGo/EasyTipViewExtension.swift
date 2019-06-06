@@ -17,54 +17,6 @@
 //  limitations under the License.
 //
 
-import EasyTipView
-
-extension EasyTipView {
-    
-    static func updateGlobalPreferences() {
-        var preferences = EasyTipView.Preferences()
-        
-        preferences.drawing.arrowHeight = 9
-        preferences.drawing.arrowWidth = 18
-        preferences.drawing.arrowPosition = .any
-        
-        preferences.drawing.font = UIFont.semiBoldAppFont(ofSize: 16)
-        preferences.drawing.foregroundColor = UIColor.nearlyBlackLight
-        preferences.drawing.backgroundColor = UIColor.white
-
-        preferences.drawing.shadowOpacity = 0.5
-        preferences.drawing.shadowOffset = CGSize(width: 0, height: 0)
-        preferences.drawing.shadowRadius = 3
-
-        preferences.drawing.textAlignment = .left
-        preferences.drawing.textLineHeight = 20
-        
-        preferences.positioning.textHInset = 16
-        preferences.positioning.textVInset = 12
-        preferences.positioning.iconPadding = 8
-        
-        preferences.positioning.maxWidth = 276
-        
-        preferences.animating.dismissOnTap = false
-        
-        EasyTipView.globalPreferences = preferences
-    }
-    
-    func handleGlobalTouch() {
-        
-        let view = TouchView()
-        UIApplication.shared.keyWindow?.addSubview(view)
-        
-        var token: NSObjectProtocol?
-        token = NotificationCenter.default.addObserver(forName: TouchView.touchNotification, object: nil, queue: nil) { _ in
-            view.removeFromSuperview()
-            self.dismiss()
-            NotificationCenter.default.removeObserver(token!)
-        }
-    }
-    
-}
-
 class TouchView: UIView {
 
     static let touchNotification = NSNotification.Name(rawValue: "com.duckduckgo.touchwindow.notifications.touch")
