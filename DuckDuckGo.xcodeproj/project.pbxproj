@@ -21,7 +21,6 @@
 		8328AAB8212A3DF200293140 /* BloomFilterWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8328AAB6212A3DF200293140 /* BloomFilterWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8328AAB9212A3DF200293140 /* BloomFilterWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8328AAB7212A3DF200293140 /* BloomFilterWrapper.mm */; };
 		8328AABE212AF70B00293140 /* HTTPSBloomFilterSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328AABD212AF70B00293140 /* HTTPSBloomFilterSpecification.swift */; };
-		8328AABF212B5D2000293140 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AABA212ADAD100293140 /* CommonCrypto.framework */; };
 		8331AEDE20AA37560024962B /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8331AEDD20AA37560024962B /* APIHeaders.swift */; };
 		83491188217F491200610F35 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AA54601E48D90700223211 /* NotificationCenter.framework */; };
 		8349118B217F491200610F35 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8349118A217F491200610F35 /* TodayViewController.swift */; };
@@ -897,7 +896,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8328AABF212B5D2000293140 /* CommonCrypto.framework in Frameworks */,
 				F1C81A741F33873800241DE6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
