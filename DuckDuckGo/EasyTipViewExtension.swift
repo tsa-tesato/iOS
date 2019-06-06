@@ -17,6 +17,8 @@
 //  limitations under the License.
 //
 
+import UIKit
+
 class TouchView: UIView {
 
     static let touchNotification = NSNotification.Name(rawValue: "com.duckduckgo.touchwindow.notifications.touch")

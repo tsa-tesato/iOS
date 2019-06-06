@@ -18,6 +18,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 @IBDesignable
 class ProgressView: UIView, CAAnimationDelegate {
