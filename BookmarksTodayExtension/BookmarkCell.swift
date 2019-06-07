@@ -37,7 +37,7 @@ class BookmarkCell: UITableViewCell {
         favicon.image = BookmarkCell.placeholderFavicon
         if let domain = domain {
             let faviconUrl = AppUrls().faviconUrl(forDomain: domain)
-            favicon.kf.setImage(with: faviconUrl, placeholder: BookmarkCell.placeholderFavicon)
+//            favicon.kf.setImage(with: faviconUrl, placeholder: BookmarkCell.placeholderFavicon)
         }
     }
 }
