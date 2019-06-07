@@ -12,6 +12,25 @@
       "idiom" : "universal",
       "filename" : "flames0015.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "subtype" : "uikit-for-mac",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "filename" : "flames0015-1.png",
+      "subtype" : "uikit-for-mac",
+      "scale" : "2x"
     }
   ],
   "info" : {
