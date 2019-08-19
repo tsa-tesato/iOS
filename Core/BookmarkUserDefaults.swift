@@ -36,6 +36,21 @@ public class BookmarkUserDefaults: BookmarkStore {
         self.userDefaults = userDefaults
     }
 
+    struct JsonBookmark: Codable {
+
+        let title: String?
+        let url: String
+        let favorite: Bool
+
+    }
+
+    public var json: String? {
+        let jsonBookmarks = bookmarks.map { JsonBookmark(title: $0.displayTitle, url: $0.url.absoluteString, favorite: false)}
+        let jsonFavorites = favorites.map { JsonBookmark(title: $0.displayTitle, url: $0.url.absoluteString, favorite: true)}
+        guard let data = try? JSONEncoder().encode(jsonBookmarks + jsonFavorites) else { return nil }
+        return String(data: data, encoding: .utf8)
+    }
+
     public var bookmarks: [Link] {
         get {
             if let data = userDefaults.data(forKey: Keys.bookmarkKey) {
@@ -72,6 +87,22 @@ public class BookmarkUserDefaults: BookmarkStore {
         var newFavorites = favorites
         newFavorites.append(favorite)
         favorites = newFavorites
+    }
+
+    public func importJson(json: String) {
+        guard let data = json.data(using: .utf8) else { return }
+        guard let bookmarks = try? JSONDecoder().decode([JsonBookmark].self, from: data) else { return }
+
+        bookmarks.forEach { bookmark in
+            guard let url = URL(string: bookmark.url) else { return }
+            let link = Link(title: bookmark.title, url: url)
+            if bookmark.favorite {
+                addFavorite(link)
+            } else {
+                addBookmark(link)
+            }
+        }
+
     }
 
 }

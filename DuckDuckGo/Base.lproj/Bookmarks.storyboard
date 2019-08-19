@@ -15,7 +15,7 @@
         <!--Themable Navigation Controller-->
         <scene sceneID="eey-lA-vN2">
             <objects>
-                <navigationController id="LwJ-9t-P9z" customClass="ThemableNavigationController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="LwJ-9t-P9z" customClass="ThemableNavigationController" customModule="DuckDuckGo" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="UeR-D3-osZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,6 +25,10 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ht1-5w-gag">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="aqL-Wl-TTD" kind="relationship" relationship="rootViewController" id="mac-A2-jb1"/>
                     </connections>
@@ -114,6 +118,19 @@
                             <outlet property="delegate" destination="aqL-Wl-TTD" id="ZOo-G6-g4I"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Load" id="1zg-de-L2g">
+                            <connections>
+                                <action selector="loadBookmarks" destination="aqL-Wl-TTD" id="jXs-Ga-IcM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="RfR-4Q-JE6"/>
+                        <barButtonItem systemItem="save" id="1dn-Qc-vXX">
+                            <connections>
+                                <action selector="saveBookmarks" destination="aqL-Wl-TTD" id="32d-yI-hNa"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Bookmarks" id="tVt-jc-YaY">
                         <barButtonItem key="leftBarButtonItem" id="V4E-YN-xud">
                             <connections>
@@ -126,6 +143,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editButton" destination="V4E-YN-xud" id="w11-ER-wKw"/>
                     </connections>

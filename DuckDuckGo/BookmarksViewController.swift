@@ -34,6 +34,9 @@ class BookmarksViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController?.toolbar.isHidden = !isDebugBuild
+
         addAplicationActiveObserver()
         configureTableView()
         refreshEditButton()
@@ -57,6 +60,22 @@ class BookmarksViewController: UITableViewController {
         }
         shareContextualAction.backgroundColor = UIColor.cornflowerBlue
         return UISwipeActionsConfiguration(actions: [shareContextualAction])
+    }
+
+    @IBAction func saveBookmarks() {
+
+        let store = BookmarkUserDefaults()
+        UIPasteboard.general.string = store.json
+
+    }
+
+    @IBAction func loadBookmarks() {
+
+        guard let json = UIPasteboard.general.string else { return }
+        let store = BookmarkUserDefaults()
+        store.importJson(json: json)
+        tableView.reloadData()
+
     }
 
     private func addAplicationActiveObserver() {
