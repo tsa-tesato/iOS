@@ -223,22 +223,24 @@ var duckduckgoContentBlocking = function() {
 
 	// public 
 	function loadSurrogate(url) {
-		var withoutQueryString = url.split("?")[0]        	
-		duckduckgoDebugMessaging.log("looking for surrogate for " + withoutQueryString)
+        duckduckgoDebugMessaging.log("loadSurrogate url: " + url)
 
-        var suggorateKeys = Object.keys(duckduckgoBlockerData.surrogates)
-        for (var i = 0; i < suggorateKeys.length; i++) {
-        	var key = suggorateKeys[i]
-            if (withoutQueryString.endsWith(key)) {
-                var surrogate = duckduckgoBlockerData.surrogates[key]
-                var s = document.createElement("script")
-                s.type = "application/javascript"
-                s.async = true
-                s.src = surrogate
-                sp = document.getElementsByTagName("script")[0]
-                sp.parentNode.insertBefore(s, sp)
-                return true
-            }
+		var withoutQueryString = url.split("?")[0]
+        withoutQueryString = withoutQueryString.match("^(https?:)?//") ? withoutQueryString.split("//")[1] : withoutQueryString
+        duckduckgoDebugMessaging.log("loadSurrogate withoutQueryString: " + withoutQueryString)
+
+        var surrogate = duckduckgoBlockerData.surrogates[withoutQueryString]
+        duckduckgoDebugMessaging.log("loadSurrogate surrogate: " + surrogate)
+        if (surrogate) {
+        	// only use surrogate directly if ios 10
+            var s = document.createElement("script")
+            s.type = "application/javascript"
+            s.async = true
+            s.src = "ddgsurrogate://" + withoutQueryString
+            sp = document.getElementsByTagName("script")[0]
+            sp.parentNode.insertBefore(s, sp)
+            duckduckgoDebugMessaging.log("loadSurrogate script: " + s.src)
+            return true
         }
 
         return false

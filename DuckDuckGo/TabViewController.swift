@@ -847,6 +847,8 @@ extension TabViewController: WKNavigationDelegate {
     }
     
     private func decidePolicyFor(navigationAction: WKNavigationAction) -> WKNavigationActionPolicy {
+        print(#function, navigationAction.request.url as Any)
+        
         let tld = storageCache.tld
         
         if navigationAction.isTargetingMainFrame()

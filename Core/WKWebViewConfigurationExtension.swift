@@ -49,6 +49,11 @@ extension WKWebViewConfiguration {
         configuration.allowsPictureInPictureMediaPlayback = true
         configuration.ignoresViewportScaleLimits = true
 
+        // fallback is injection via JS
+        if #available(iOSApplicationExtension 11.0, *) {
+            configuration.setURLSchemeHandler(DDGSurrogateHandler.shared, forURLScheme: "ddgsurrogate")
+        }
+
         return configuration
     }
 
@@ -58,6 +63,21 @@ extension WKWebViewConfiguration {
                injectContentBlockingScripts: contentBlockingEnabled).load()
     }
 
+}
+
+@available(iOSApplicationExtension 11.0, *)
+private class DDGSurrogateHandler: NSObject, WKURLSchemeHandler {
+    
+    static var shared = DDGSurrogateHandler()
+    
+    func webView(_ webView: WKWebView, start urlSchemeTask: WKURLSchemeTask) {
+        print(#function)
+    }
+    
+    func webView(_ webView: WKWebView, stop urlSchemeTask: WKURLSchemeTask) {
+        print(#function)
+    }
+    
 }
 
 private class Loader {
