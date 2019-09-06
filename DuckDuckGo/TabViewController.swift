@@ -46,7 +46,6 @@ class TabViewController: UIViewController {
     @IBOutlet weak var webViewContainer: UIView!
     
     @IBOutlet var showBarsTapGestureRecogniser: UITapGestureRecognizer!
-    var longPressGestureRecognizer: UILongPressGestureRecognizer?
     
     private let instrumentation = TabInstrumentation()
    
@@ -173,7 +172,6 @@ class TabViewController: UIViewController {
         instrumentation.willPrepareWebView()
         webView = WKWebView(frame: view.bounds, configuration: configuration)
         webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        attachLongPressHandler(webView: webView)
         webView.allowsBackForwardNavigationGestures = true
         
         addObservers()
@@ -187,6 +185,7 @@ class TabViewController: UIViewController {
         controller.add(self, name: MessageHandlerNames.cache)
         controller.add(self, name: MessageHandlerNames.log)
         controller.add(self, name: MessageHandlerNames.findInPageHandler)
+        controller.add(self, name: MessageHandlerNames.longPress)
         reloadScripts()
         updateUserAgent()
         
@@ -205,13 +204,6 @@ class TabViewController: UIViewController {
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.url), options: .new, context: nil)
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.canGoBack), options: .new, context: nil)
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.canGoForward), options: .new, context: nil)
-    }
-    
-    private func attachLongPressHandler(webView: WKWebView) {
-        let gestrueRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(onLongPress(sender:)))
-        gestrueRecognizer.delegate = self
-        webView.scrollView.addGestureRecognizer(gestrueRecognizer)
-        longPressGestureRecognizer = gestrueRecognizer
     }
     
     private func consumeCookiesThenLoadUrl(_ url: URL?) {
@@ -333,20 +325,6 @@ class TabViewController: UIViewController {
     
     func goForward() {
         webView.goForward()
-    }
-    
-    @objc func onLongPress(sender: UILongPressGestureRecognizer) {
-        guard sender.state == .began else { return }
-        
-        let x = Int(sender.location(in: webView).x)
-        let y = Int(sender.location(in: webView).y)
-        let offsetY = y
-        
-        webView.getUrlAtPoint(x: x, y: offsetY) { [weak self] (url) in
-            guard let url = url else { return }
-            let point = Point(x: x, y: y)
-            self?.launchLongPressMenu(atPoint: point, forUrl: url)
-        }
     }
     
     private func showError(message: String) {
@@ -547,6 +525,7 @@ class TabViewController: UIViewController {
         controller.removeScriptMessageHandler(forName: MessageHandlerNames.cache)
         controller.removeScriptMessageHandler(forName: MessageHandlerNames.log)
         controller.removeScriptMessageHandler(forName: MessageHandlerNames.findInPageHandler)
+        controller.removeScriptMessageHandler(forName: MessageHandlerNames.longPress)
     }
     
     private func removeObservers() {
@@ -578,6 +557,7 @@ extension TabViewController: WKScriptMessageHandler {
         static let cache = "cacheMessage"
         static let log = "log"
         static let findInPageHandler = "findInPageHandler"
+        static let longPress = "longPress"
     }
     
     public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -599,9 +579,22 @@ extension TabViewController: WKScriptMessageHandler {
         case MessageHandlerNames.findInPageHandler:
             handleFindInPage(message: message)
 
+        case MessageHandlerNames.longPress:
+            handleLongPress(message: message)
+
         default:
             assertionFailure("Unhandled message: \(message.name)")
         }
+    }
+    
+    private func handleLongPress(message: WKScriptMessage) {
+        guard let dict = message.body as? [String: Any] else { return }
+        guard let resource = dict["resource"] as? String, let url = URL(string: resource) else { return }
+        guard let type = dict["type"] as? String else { return }
+        guard let x = dict["x"] as? Int else { return }
+        guard let y = dict["y"] as? Int else { return }
+
+        self.launchLongPressMenu(atPoint: Point(x: x, y: y), forUrl: url)
     }
 
     private func handleFindInPage(message: WKScriptMessage) {
@@ -932,18 +925,6 @@ extension TabViewController: UIPopoverPresentationControllerDelegate {
 }
 
 extension TabViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if isShowBarsTap(gestureRecognizer) {
-            return true
-        }
-        if gestureRecognizer == longPressGestureRecognizer {
-            let x = Int(gestureRecognizer.location(in: webView).x)
-            let y = Int(gestureRecognizer.location(in: webView).y)
-            let url = webView.getUrlAtPointSynchronously(x: x, y: y)
-            return url != nil
-        }
-        return false
-    }
 
     private func isShowBarsTap(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let y = gestureRecognizer.location(in: webView).y
@@ -956,7 +937,7 @@ extension TabViewController: UIGestureRecognizerDelegate {
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherRecognizer: UIGestureRecognizer) -> Bool {
-        return gestureRecognizer == showBarsTapGestureRecogniser || gestureRecognizer == longPressGestureRecognizer
+        return gestureRecognizer == showBarsTapGestureRecogniser
     }
 
     func requestFindInPage() {

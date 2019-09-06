@@ -17,27 +17,65 @@
 //  limitations under the License.
 //
 
+(function() {
 
-var duckduckgoDocument = function () {
-    
-    getHrefFromPoint = function(x, y) {
-        var element = document.elementFromPoint(x, y);
-        while (element && !element.href) {
-            element = element.parentNode
+    document.documentElement.style.webkitTouchCallout = 'none';
+
+    var startEvent = null
+    var longPressTimer = null
+
+    document.addEventListener('touchstart', function(event) {
+
+        if (!["A", "IMG"].includes(event.touches[0].target.tagName)) {
+            return false;
         }
-        return getHrefFromElement(element)
-    };
-    
-    getHrefFromElement = function(element) {
-        if (element) {
-            return element.href
+
+        startEvent = event
+        longPressTimer = setTimeout(function() { 
+
+            const touch = startEvent.touches[0];
+            const type = touch.target.tagName;
+
+            var resource = "";
+            if (type == "A") {
+                resource = touch.target.href;
+            } else if (type == "IMG") {
+                resource = touch.target.src;
+            }
+
+            webkit.messageHandlers.longPress.postMessage({ 
+                "webkitevent": "long press!", 
+                "resource": resource, 
+                "type": type,
+                "x": touch.clientX,
+                "y": touch.clientY
+            });
+
+            clearLongPressTimer();
+        }, 1000);
+        return true;
+    });
+
+    document.addEventListener('touchmove', function(event) {
+        startEvent = null;   
+        return true;
+    });
+
+    document.addEventListener('touchend', function(event) {
+        if (longPressTimer && startEvent && startEvent.targetTouches[0].target == event.changedTouches[0].target) {        
+            event.changedTouches[0].target.click();
         }
-        return null
-    };
-    
-    return {
-        getHrefFromPoint: getHrefFromPoint,
-        getHrefFromElement: getHrefFromElement
-    };
-    
-}();
+
+        event.preventDefault();
+        event.stopPropagation();
+        startEvent = null;
+        clearLongPressTimer()
+        return true;
+    });
+
+    function clearLongPressTimer() {
+        clearTimeout(longPressTimer);
+        longPressTimer = null;
+    }
+
+}) ()
