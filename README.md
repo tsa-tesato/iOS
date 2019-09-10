@@ -1,5 +1,7 @@
-# DuckDuckGo iOS
+# DuckDuckGo iOS modified
 
+***This software includes the work that is distributed in the Apache License 2.0.***
+***Refer git log to check changes***
 
 We are excited to engage the community in development!
 
